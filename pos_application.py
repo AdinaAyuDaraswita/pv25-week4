@@ -68,7 +68,7 @@ class Ui_MainWindow(object):
         self.label_4 = QtWidgets.QLabel(self.centralwidget)
         self.label_4.setGeometry(QtCore.QRect(180, 430, 481, 16))
         self.label_4.setObjectName("label_4")
-        self.label_4.setText("Total: Rp. 0 (0 barang)")
+        self.label_4.setText("Total: Rp. 0 ")
 
         self.label_5 = QtWidgets.QLabel(self.centralwidget)
         self.label_5.setGeometry(QtCore.QRect(10, 10, 301, 16))
@@ -109,7 +109,7 @@ class Ui_MainWindow(object):
         self.label_6.setText(_translate("MainWindow", "NIM: F1D022030"))
 
     def add_to_cart(self):
-        """ Fungsi untuk menambahkan barang ke cart dan menghitung total harga keseluruhan """
+   
         product_text = self.comboBox.currentText()
         quantity_text = self.lineEdit.text()
         discount_text = self.comboBox_3.currentText()
@@ -135,7 +135,7 @@ class Ui_MainWindow(object):
         self.total_amount += int(total_price)
 
         self.textEdit.setText("\n".join(self.cart_items))
-        self.label_4.setText(f"Total: Rp. {self.total_amount} ({len(self.cart_items)} barang)")
+        self.label_4.setText(f"Total: Rp. {self.total_amount}")
 
     
         self.comboBox.setCurrentIndex(0)
